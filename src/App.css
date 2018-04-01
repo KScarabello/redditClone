@@ -2,27 +2,41 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.subreddit-banner-container{
+  width: 100vw;
+  height: 20px;
+  background-color: #F0F0F0;
+  border-bottom: 1px solid black;
+  display: flex;
+  
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.text {
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+.my-subreddits{
+  display: flex;
+  justify-content: row;
+} 
+
+.subreddits-list{
+  display: flex;
+  justify-content: row;
 }
 
-.App-intro {
-  font-size: large;
-}
+.blue-bar{
+  width: 100vw;
+  height: 50px;
+  background-color: #CEE3F8;
+  }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  .snoo-and-reddit-logo{
+    background-image: url('./Assets/sprite.png');
+    background-position: 5px -1320px;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 120px;
+  }
