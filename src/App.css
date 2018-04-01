@@ -31,12 +31,48 @@
   width: 100vw;
   height: 50px;
   background-color: #CEE3F8;
-  }
+  display: flex;
+  flex-direction: row;
+}
 
-  .snoo-and-reddit-logo{
-    background-image: url('./Assets/sprite.png');
-    background-position: 5px -1320px;
+.blue-bar-nav {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 72px;
+  top: 14px;
+}
+.snoo-and-reddit-logo{
+  background-image: url('./Assets/sprite.png');
+  background-position: 5px -1320px;
+  background-repeat: no-repeat;
+  height: 45px;
+  width: 120px;
+}
+
+.blue-bar-nav{
+  display: flex;
+  flex-direction: row;
+  height: 18px;
+}
+
+.tab{
+  color: #369;
+  font-weight: bold;
+  background-color: #EFF7FF; 
+}
+
+.userinfo-container{
+  background-color: #EFF7FF;
+  height: 20px;
+  position: relative;
+  left: 408px;
+  bottom: -30px;
+
+}
+
+.message-icon{
+    background-position: 0px -1687px;
     background-repeat: no-repeat;
-    height: 45px;
-    width: 120px;
-  }
+    
+}
