@@ -76,3 +76,27 @@
     background-repeat: no-repeat;
     
 }
+
+.footer-container{
+  width: 100vw;
+}
+
+.footer-nav-box{
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  
+}
