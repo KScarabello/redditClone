@@ -8,7 +8,7 @@ export default class Home extends Component {
         super(props)
 
         this.state = {
-            subreddits: []
+            posts: []
         }
     }
 
@@ -17,7 +17,7 @@ export default class Home extends Component {
         axios.get('https://www.reddit.com/best.json')
             .then((res) => {
                 this.setState({
-                    subreddits: res.data.data.children
+                    posts: res.data.data.children
             })
         }) 
     }
@@ -26,12 +26,28 @@ export default class Home extends Component {
         return( 
             <div className='home-container'>        
                 {                   
-                    this.state.subreddits.map((post, i) => {
+                    this.state.posts.map((post, i) => {
                             return(
                                 <div className='post-container'>
-                                    <h1>{post.data.i}</h1>
+                                    <p>{Number(i) + 1}</p>
                                     <div className='post-text-container'>
-                                        <h1 className='post-title'>{post.data.title}</h1>
+                                        <div className='post-title-container'>
+                                            <h1 className='post-title'>{post.data.title}</h1>
+                                            <p>({post.data.domain})</p>
+                                        </div>
+                                        <div className='post-navigation-container'>
+                                            <img src='' />
+                                            <div className='post-info'>
+                                                <p>submitted 8 hours ago by {post.data.author} to {post.data.subreddit_name_prefixed}</p>
+                                                <div className='post-navigation'>
+                                                    <p>comments</p>
+                                                    <p>share</p>
+                                                    <p>save</p>
+                                                    <p>hide</p>
+                                                    <p>report</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             )

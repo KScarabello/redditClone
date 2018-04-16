@@ -1,19 +1,32 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 export default class SubredditBanner extends Component{
     constructor(props){
         super(props)
 
         this.state = {
-            dropdownClicked: false
+            dropdownClicked: false,
+            subreddits: []
         }
 
+    }
+
+    componentDidMount(){
+        axios.get('http://www.reddit.com/subreddits.json')
+            .then((res) => {
+                console.log(res.data.data.children)
+                this.setState({
+                    subreddits: res.data.data.children
+                })
+
+            })
     }
 
     
     render(){
 
-        const subreddits = ['childfree', 'orchids', 'bipolar', 'iama', 'nature', 'earthporn', 'utah', 'violinist', 'webdev', 'workout', 'lorem', 'ipsum', 'charlie', 'kilo', 'alpha', 'limo', 'tango', 'wine', 'california', 'travel', 'movies']
+        
         
         return(
             <div className='subreddit-banner-container'>
@@ -22,9 +35,11 @@ export default class SubredditBanner extends Component{
                 </div>
                 <div className=' text subreddits-list'>
                     {
-                        subreddits.map((subreddit) => {
+                        this.state.subreddits.map((subreddit) => {
+                            console.log(subreddit.data)
                             return(
-                                <div>{' ' + subreddit.toUpperCase() + ' - '}</div>
+                                
+                                <div>{' ' + subreddit.data.display_name.toUpperCase() + ' - '}</div>
                             )
                         })
                     }

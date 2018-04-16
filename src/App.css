@@ -136,12 +136,28 @@ li {
 }
 
 .post-text-container{
-  display: flex;
-  flex-direction: column;
+  display: inline;
+  
 }
 .post-title{
   color: #0000ff;
   font-size: medium;
   font-weight: normal;
   margin-bottom: 1px;
+  display: inline;
+}
+
+.post-navigation-container{
+  display: flex;
+
+}
+
+.post-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.post-navigation{
+  display:flex;
+  
 }
