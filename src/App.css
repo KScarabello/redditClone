@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font: normal x-small verdana,arial,helvetica,sans-serif;
 }
 
 .subreddit-banner-container{
@@ -77,10 +78,6 @@
     
 }
 
-.home-container{
-  width: 100vw;
-  height: 350px;
-}
 
 .footer-container{
   width: 100vw;
@@ -123,4 +120,28 @@ li {
 .footer-container p {
   font-size: 10px;
   color: #808080;
+}
+
+/* home component */
+
+.home-container{
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  
+}
+
+.post-container{
+  display: flex;
+}
+
+.post-text-container{
+  display: flex;
+  flex-direction: column;
+}
+.post-title{
+  color: #0000ff;
+  font-size: medium;
+  font-weight: normal;
+  margin-bottom: 1px;
 }
